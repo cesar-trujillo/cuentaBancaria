@@ -42,9 +42,9 @@ public class CuentaBancaria {
     public void retirarSaldo(float saldo){
         if(this.saldo > 0){
             this.saldo -= saldo;
+        }else {
+            System.out.println("saldo insuficiente");
         }
-        
-        System.out.println("saldo insuficiente");
     }
 
     @Override
