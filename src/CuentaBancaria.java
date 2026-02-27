@@ -1,16 +1,19 @@
 public class CuentaBancaria {
     private String numeroCuenta;
+    private String PIN;
     private String propietario;
     private float saldo;
 
     public CuentaBancaria(){
         numeroCuenta = "";
+        PIN = "";
         propietario = "";
         saldo = 0;
     }
 
-    public CuentaBancaria(String numeroCuenta, String propietario, float saldo) {
+    public CuentaBancaria(String numeroCuenta, String PIN, String propietario, float saldo) {
         this.numeroCuenta = numeroCuenta;
+        this.PIN = PIN;
         this.propietario = propietario;
         this.saldo = saldo;
     }
@@ -27,8 +30,16 @@ public class CuentaBancaria {
         return saldo;
     }
 
+    public String getPIN() {
+        return PIN;
+    }
+
     public void setNumeroCuenta(String numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
+    }
+
+    public void setPIN(String pIN) {
+        PIN = pIN;
     }
 
     public void setPropietario(String propietario) {
@@ -39,9 +50,9 @@ public class CuentaBancaria {
         this.saldo += saldo;
     }
 
-    public void retirarSaldo(float saldo){
-        if(this.saldo > 0){
-            this.saldo -= saldo;
+    public void retirarSaldo(float retiro){
+        if(saldo > 0 && saldo > retiro){
+            saldo -= retiro;
         }else {
             System.out.println("saldo insuficiente");
         }
@@ -49,6 +60,6 @@ public class CuentaBancaria {
 
     @Override
     public String toString() {
-        return numeroCuenta + "\n" +  propietario + "\n"+ saldo;
+        return numeroCuenta + "\n" + PIN + "\n" +  propietario + "\n"+ saldo;
     }
 }
