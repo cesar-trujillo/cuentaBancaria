@@ -27,5 +27,9 @@ public class App {
         if(cajero.retirarSaldo(100)){
             cuenta1.retirarSaldo(100);
         }
+
+        if(cajero.pagoServicios()){
+            cuenta1.retirarSaldo(100);
+        }
     }
 }
