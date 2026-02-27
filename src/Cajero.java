@@ -34,7 +34,7 @@ public class Cajero {
         }
     }
 
-    public boolean pagoServicios(){//no terminamos 
+    public boolean pagoServicios(){
         if(true){
             return true;
         }else{
