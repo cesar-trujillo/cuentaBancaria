@@ -2,6 +2,7 @@
 //agregar nip, para hacer retiros en cajero validar nip, monto minimo de 200, multiplo de 100, permitir 
 // hacer pago de servicios, para hacerlo tiene que recibir la cantidad en billetes de cualquier denominacion 
 // y puede dar cambio en monedas y billetes de cualquier denominacion, agregar registro de movimientos de la cuenta
+//
 public class App {
     public static void main(String[] args) throws Exception {
         CuentaBancaria cuenta1 = new CuentaBancaria("123456789", "123465", "propietario1", 0);

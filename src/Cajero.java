@@ -34,9 +34,16 @@ public class Cajero {
         }
     }
 
+<<<<<<< HEAD
     public boolean pagoServicios(float monto, float saldoDisponible){
         if (monto <= 0) {
             System.out.println("Error: El monto debe ser mayor a cero");
+=======
+    public boolean pagoServicios(){
+        if(true){
+            return true;
+        }else{
+>>>>>>> 4bc13dec75b0990b21ca4bf7447c19e736422a8a
             return false;
         }else if (monto > saldoDisponible) {
             System.out.println("Error: Saldo insuficiente para realizar el pago");
