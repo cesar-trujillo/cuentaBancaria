@@ -34,11 +34,16 @@ public class Cajero {
         }
     }
 
-    public boolean pagoServicios(){//no terminamos 
-        if(true){
-            return true;
-        }else{
+    public boolean pagoServicios(float monto, float saldoDisponible){
+        if (monto <= 0) {
+            System.out.println("Error: El monto debe ser mayor a cero");
             return false;
+        }else if (monto > saldoDisponible) {
+            System.out.println("Error: Saldo insuficiente para realizar el pago");
+        return false;
+        }else { 
+            return true;
         }
+
     }
 }
