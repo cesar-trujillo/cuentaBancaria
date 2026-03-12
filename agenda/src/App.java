@@ -8,16 +8,23 @@ public class App {
 
         Contacto contacto1 = new Contacto("contacto1", "123456789" , "hola@gmail.com", "pajapan");
         Contacto contacto2 = new Contacto("contacto2", "987654321" , "adios@gmail.com", "japon");
+        Contacto contacto3 = new Contacto("contacto3", "987654321" , "adios@gmail.com", "japon");
 
 
-        agenda.setContactos(contacto1);
-        agenda.setContactos(contacto2);
+        agenda.agregarContactos(contacto1);
+        agenda.agregarContactos(contacto2);
+        
+        if(agenda.agregarContactos(contacto3)){
+            System.out.println("se agrego el contacto");
+        }else {
+            System.out.println("el numero de telefono ya existe");
+        }
 
         for (Contacto c : agenda.getContactos()) {
             System.out.println(c);
         }
 
-        agenda.eliminarContacto("12345678");
+        agenda.editarContacto("987654321", "987654312", 2);
 
         for (Contacto c : agenda.getContactos()) {
             System.out.println(c);
