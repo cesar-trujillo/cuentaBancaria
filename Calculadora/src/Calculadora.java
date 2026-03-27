@@ -26,7 +26,7 @@ class Input {
             case '-':
                 resultado = Integer.parseInt(args[0]) - Integer.parseInt(args[2]);
                 break;
-            case '.':
+            case '*':
                 resultado = Integer.parseInt(args[0]) * Integer.parseInt(args[2]);
                 break;
             case '/':
