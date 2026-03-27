@@ -2,7 +2,7 @@ class Input {
     public String entrada(String[] args){
 
         if (args.length != 3) {
-            throw new IllegalArgumentException("Usage: java Calculator operand1 operator operand2");
+            throw new IllegalArgumentException("Error: Ingresa el primer digito, el operador y el segundo digito");
         }else{
             try {
                 Integer.parseInt(args[0]);
